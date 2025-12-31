@@ -11,9 +11,9 @@
             --primary-color: #007AFF;
             --secondary-color: #5856D6;
             --card-color: rgba(255, 255, 255, 0.1);
-            --text-color: white;
-            --input-text-color: #000000; /* Màu chữ đen cho input */
-            --border-color: rgba(255, 255, 255, 0.3); /* Viền sáng hơn */
+            --text-color: rgb(255, 255, 255);
+            --input-text-color: #000000;
+            --border-color: rgba(255, 255, 255, 0.3);
             --radius: 15px;
         }
         
@@ -53,7 +53,7 @@
         }
         
         .description {
-            color: rgba(255, 255, 255, 0);
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 15px;
             font-size: 1em;
         }
@@ -64,7 +64,7 @@
             padding: 20px;
             margin-bottom: 15px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 2px solid var(--border-color); /* Thêm viền cho card */
+            border: 2px solid var(--border-color);
         }
         
         .form-group {
@@ -82,29 +82,29 @@
         input, select, textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid rgba(255, 255, 255, 0.3); /* Viền sáng hơn */
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
             font-size: 16px;
-            background: rgba(255, 255, 255, 0.9); /* Nền sáng hơn cho chữ đen rõ */
-            color: var(--input-text-color); /* Màu chữ đen */
+            background: #ffffff00;
+            color: var(--input-text-color);
             transition: border-color 0.3s;
         }
         
         input::placeholder, textarea::placeholder {
-            color: rgba(0, 0, 0, 0.6); /* Placeholder màu xám đậm */
+            color: rgba(0, 0, 0, 0.6);
         }
         
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: var(--primary-color);
             background: rgba(255, 255, 255, 1);
-            box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.3); /* Hiệu ứng focus */
+            box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.3);
         }
         
         button {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient cho nút */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             padding: 12px 20px;
             border-radius: 8px;
             font-size: 16px;
@@ -128,7 +128,7 @@
         
         .preview-content {
             background: rgba(0, 0, 0, 0.8);
-            border: 2px solid var(--border-color); /* Thêm viền */
+            border: 2px solid var(--border-color);
             border-radius: 8px;
             padding: 20px;
             max-height: 400px;
@@ -190,14 +190,14 @@
             color: white;
             font-weight: 500;
             transition: all 0.3s;
-            border: 2px solid rgba(255, 255, 255, 0.2); /* Viền cho tab */
+            border: 2px solid rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.1);
             min-width: 140px;
             flex-shrink: 0;
         }
         
         .tab.active {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient cho tab active */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border-color: rgba(255, 255, 255, 0.5);
         }
@@ -244,7 +244,7 @@
             color: white;
             font-weight: 500;
             transition: all 0.3s;
-            border: 2px solid rgba(255, 255, 255, 0.2); /* Viền cho advanced tab */
+            border: 2px solid rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.1);
             min-width: 160px;
             flex-shrink: 0;
@@ -252,7 +252,7 @@
         }
         
         .advanced-tab.active {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient cho advanced tab active */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border-color: rgba(255, 255, 255, 0.5);
         }
@@ -273,7 +273,7 @@
             margin-top: 15px;
             display: none;
             border-left: 4px solid #28a745;
-            border: 2px solid rgba(40, 167, 69, 0.5); /* Thêm viền */
+            border: 2px solid rgba(40, 167, 69, 0.5);
         }
         
         .form-row {
@@ -291,7 +291,7 @@
             padding: 20px;
             margin-top: 20px;
             border-left: 4px solid #FFA000;
-            border: 2px solid rgba(255, 160, 0, 0.3); /* Thêm viền */
+            border: 2px solid rgba(255, 160, 0, 0.3);
         }
         
         .webclip-list {
@@ -305,7 +305,7 @@
             align-items: center;
             gap: 12px;
             padding: 12px;
-            border: 2px solid var(--border-color); /* Viền cho webclip item */
+            border: 2px solid var(--border-color);
             border-radius: 8px;
             margin-bottom: 10px;
             background: rgba(255, 255, 255, 0.05);
@@ -317,7 +317,7 @@
             border-radius: 8px;
             overflow: hidden;
             flex-shrink: 0;
-            border: 2px solid rgba(255, 255, 255, 0.2); /* Viền cho icon */
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
         
         .webclip-item-icon img {
@@ -347,9 +347,9 @@
         }
         
         .remove-btn {
-            background: linear-gradient(135deg, #FF3B30, #D32F2F); /* Gradient cho nút xóa */
+            background: linear-gradient(135deg, #FF3B30, #D32F2F);
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3); /* Viền cho nút xóa */
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 6px;
             padding: 6px 12px;
             cursor: pointer;
@@ -381,7 +381,7 @@
         
         .file-input-btn {
             background-color: rgba(255, 255, 255, 0.1);
-            border: 2px dashed var(--border-color); /* Viền dashed */
+            border: 2px dashed var(--border-color);
             border-radius: 8px;
             padding: 20px;
             text-align: center;
@@ -419,7 +419,7 @@
             z-index: 1000;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút menu */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             font-size: 20px;
         }
 
@@ -445,7 +445,7 @@
             z-index: 1000;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút settings */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             font-size: 20px;
         }
 
@@ -471,7 +471,7 @@
             z-index: 1000;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút music */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             font-size: 22px;
         }
 
@@ -515,7 +515,7 @@
             z-index: 1000;
             transition: left 0.5s ease;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            border: 2px solid var(--border-color); /* Viền cho panel */
+            border: 2px solid var(--border-color);
         }
 
         .customization-panel.open {
@@ -535,7 +535,7 @@
             border-radius: 0 10px 10px 0;
             cursor: pointer;
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho toggle */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
@@ -568,8 +568,6 @@
 
         /* Gradient cho các theme */
         .theme-purple { background: linear-gradient(135deg, #8A2387, #E94057, #F27121); }
-        .theme-red { background: linear-gradient(135deg, #FF416C, #FF4B2B); }
-        .theme-blue { background: linear-gradient(135deg, #3498db, #2c3e50); }
         .theme-green { background: linear-gradient(135deg, #00b09b, #96c93d); }
 
         .toast {
@@ -585,7 +583,7 @@
             display: none;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
-            border: 2px solid var(--border-color); /* Viền cho toast */
+            border: 2px solid var(--border-color);
         }
 
         .input-group {
@@ -620,7 +618,7 @@
 
         .bg-option {
             padding: 10px;
-            border: 2px solid var(--border-color); /* Viền cho bg option */
+            border: 2px solid var(--border-color);
             border-radius: 8px;
             cursor: pointer;
             text-align: center;
@@ -636,57 +634,6 @@
         .bg-option.active {
             border-color: var(--primary-color);
             background: rgba(255, 255, 255, 0.2);
-        }
-
-        .install-options-container {
-            position: relative;
-            margin-top: 20px;
-        }
-        
-        .install-options-scroll {
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            padding-bottom: 5px;
-        }
-        
-        .install-options-scroll::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .install-options {
-            display: inline-flex;
-            gap: 15px;
-            min-width: 100%;
-            padding: 10px 0;
-        }
-        
-        .install-option {
-            flex: 1;
-            text-align: center;
-            padding: 15px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid var(--border-color); /* Viền cho install option */
-            cursor: pointer;
-            transition: all 0.3s;
-            min-width: 200px;
-        }
-        
-        .install-option:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--primary-color);
-        }
-        
-        .install-option.active {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: var(--primary-color);
-        }
-        
-        .install-icon {
-            font-size: 24px;
-            margin-bottom: 10px;
         }
 
         .flower {
@@ -711,7 +658,7 @@
             padding: 20px;
             margin-top: 20px;
             border-left: 4px solid var(--primary-color);
-            border: 2px solid var(--border-color); /* Viền cho installation guide */
+            border: 2px solid var(--border-color);
         }
 
         .installation-steps {
@@ -725,7 +672,7 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
-            border: 2px solid rgba(255, 255, 255, 0.1); /* Viền cho installation step */
+            border: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         .step-number {
@@ -740,7 +687,7 @@
             font-weight: bold;
             margin-right: 15px;
             flex-shrink: 0;
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho step number */
+            border: 2px solid rgba(255, 255, 255, 0.5);
         }
 
         .step-content {
@@ -754,7 +701,7 @@
 
         .step-description {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         @media (max-width: 768px) {
@@ -817,9 +764,9 @@
         }
 
         .create-file-btn {
-            background: linear-gradient(135deg, #28a745, #218838); /* Gradient cho create file button */
+            background: linear-gradient(135deg, #28a745, #218838);
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho create file button */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             padding: 15px 25px;
             border-radius: 8px;
             font-size: 18px;
@@ -855,7 +802,7 @@
         .install-btn {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho install button */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             padding: 15px 25px;
             border-radius: 8px;
             font-size: 16px;
@@ -877,7 +824,7 @@
         .create-btn {
             background: linear-gradient(135deg, #28a745, #218838);
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho create button */
+            border: 2px solid rgba(255, 255, 255, 0.5);
             padding: 15px 25px;
             border-radius: 8px;
             font-size: 16px;
@@ -939,9 +886,40 @@
             font-size: 20px;
             width: 30px;
         }
+
+        .auto-save-info {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #4CAF50;
+            display: none;
+            z-index: 1000;
+            border: 2px solid rgba(76, 175, 80, 0.5);
+        }
+
+        .auto-save-info.show {
+            display: block;
+            animation: fadeInOut 2s ease;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
+    <!-- Auto Save Info -->
+    <div class="auto-save-info" id="autoSaveInfo">
+        <i class="fas fa-save"></i> Đã lưu tự động
+    </div>
+
     <!-- Nút Menu -->
     <button class="menu-btn" id="menuBtn">
         <i class="fas fa-bars"></i>
@@ -950,30 +928,10 @@
     <!-- Menu Panel -->
     <div class="menu-panel" id="menuPanel">
         <h3 style="color: white; margin-bottom: 20px; text-align: center;">Menu</h3>
-        <div class="menu-item" data-tab="basic">
-            <i class="fas fa-info-circle"></i>
-            <span>Thông Tin Cơ Bản</span>
-        </div>
-        <div class="menu-item" data-tab="webclip">
-            <i class="fas fa-link"></i>
-            <span>Web Clip</span>
-        </div>
-        <div class="menu-item" data-tab="wifi">
-            <i class="fas fa-wifi"></i>
-            <span>Wi-Fi</span>
-        </div>
-        <div class="menu-item" data-tab="dns">
-            <i class="fas fa-server"></i>
-            <span>DNS</span>
-        </div>
-        <div class="menu-item" data-tab="advanced">
-            <i class="fas fa-cogs"></i>
-            <span>Nâng Cao</span>
-        </div>
-        <div class="menu-item" id="quickGenerateBtn">
-            <i class="fas fa-bolt"></i>
-            <span>Tạo Nhanh Cấu Hình</span>
-        </div>
+         <a href="https://error401.vercel.app/" target="_blank" class="menu-item" style="text-decoration: none;">
+        <i class="fas fa-bolt"></i>
+        <span>Home</span>
+    </a>
         <div class="menu-item" id="exportConfigBtn">
             <i class="fas fa-download"></i>
             <span>Xuất Cấu Hình</span>
@@ -981,6 +939,14 @@
         <div class="menu-item" id="importConfigBtn">
             <i class="fas fa-upload"></i>
             <span>Nhập Cấu Hình</span>
+        </div>
+        <div class="menu-item" id="saveDataBtn">
+            <i class="fas fa-save"></i>
+            <span>Lưu Dữ Liệu</span>
+        </div>
+        <div class="menu-item" id="loadDataBtn">
+            <i class="fas fa-folder-open"></i>
+            <span>Tải Dữ Liệu</span>
         </div>
         <div class="menu-item" id="resetFormBtn">
             <i class="fas fa-redo"></i>
@@ -1347,11 +1313,6 @@
         <i class="fas fa-cog"></i>
     </button>
 
-    <!-- Music Button -->
-    <button class="music-btn" id="musicBtn">
-        <i class="fas fa-music"></i>
-    </button>
-
     <!-- Customization Panel -->
     <div class="customization-panel" id="customizationPanel">
         <button class="toggle-panel" id="togglePanel">
@@ -1373,14 +1334,10 @@
             </div>
         </div>
         
-        <div class="input-group">
-            <label>Chọn màu chủ đề:</label>
-            <div class="color-options">
-                <div class="color-option theme-blue active" data-theme="blue"></div>
-                <div class="color-option theme-red" data-theme="red"></div>
-                <div class="color-option theme-green" data-theme="green"></div>
-                <div class="color-option theme-purple" data-theme="purple"></div>
-            </div>
+        <div class="color-options">
+            <div class="color-option theme-purple" data-theme="purple"></div>
+    <div class="color-option theme-green active" data-theme="green"></div>
+</div>
         </div>
     </div>
     
@@ -1440,6 +1397,16 @@ function showToast(message, isSuccess = true) {
         setTimeout(() => {
             toast.style.display = 'none';
         }, 5000);
+    }
+}
+
+function showAutoSaveInfo() {
+    const autoSaveInfo = document.getElementById('autoSaveInfo');
+    if (autoSaveInfo) {
+        autoSaveInfo.classList.add('show');
+        setTimeout(() => {
+            autoSaveInfo.classList.remove('show');
+        }, 2000);
     }
 }
 
@@ -1504,6 +1471,7 @@ function removeWebclip(id) {
     
     updateWebclipsCount();
     showToast('Đã xóa Web Clip', true);
+    saveAllData(); // Lưu sau khi xóa
 }
 
 function clearAllWebclips() {
@@ -1526,6 +1494,7 @@ function clearAllWebclips() {
         }
         updateWebclipsCount();
         showToast('Đã xóa tất cả web clip', true);
+        saveAllData(); // Lưu sau khi xóa tất cả
     }
 }
 
@@ -1594,6 +1563,7 @@ function addSingleWebclip() {
     singleWebclipIconBase64 = null;
     
     showToast(`Đã thêm webclip "${name}" thành công!`, true);
+    saveAllData(); // Lưu sau khi thêm
 }
 
 function generateMultipleWebclips() {
@@ -1626,8 +1596,8 @@ function generateMultipleWebclips() {
     for (let i = 1; i <= count; i++) {
         const webclip = {
             id: generateUUID(),
-            name: baseName, // Không thêm số vào tên
-            url: baseURL,   // Không thêm số vào URL
+            name: baseName,
+            url: baseURL,
             icon: currentIconBase64,
             fullScreen: fullScreen
         };
@@ -1637,7 +1607,8 @@ function generateMultipleWebclips() {
     }
     
     updateWebclipsCount();
-    showToast(`Đã tạo ${count} Web Clip thành công! ${fullScreen ? '(Toàn màn hình)' : ''}`, true);
+    showToast(`Đã tạo ${count} Web Clip thành công! Tất cả đều có cùng tên và URL. ${fullScreen ? '(Toàn màn hình)' : ''}`, true);
+    saveAllData(); // Lưu sau khi tạo nhiều webclip
 }
 
 // Music control functions
@@ -1664,6 +1635,7 @@ function toggleMusic() {
         localStorage.setItem('musicEnabled', 'true');
         showToast('Đã bật nhạc nền', true);
     }
+    saveAllData(); // Lưu cài đặt âm nhạc
 }
 
 function updateMusicVolume() {
@@ -1713,7 +1685,6 @@ function initCustomization() {
     
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme && colorOptions.length > 0) {
-        // Xác định gradient dựa trên theme name
         const themeName = getThemeName(savedTheme);
         setThemeGradient(themeName);
         
@@ -1743,25 +1714,13 @@ function initCustomization() {
 }
 
 function getThemeName(themeColors) {
-    // Trả về tên theme dựa trên màu gradient
-    if (themeColors.includes('FF416C')) return 'red';
-    if (themeColors.includes('3498db')) return 'blue';
     if (themeColors.includes('00b09b')) return 'green';
     if (themeColors.includes('8A2387')) return 'purple';
-    return 'blue';
+    return 'purple';
 }
 
 function setThemeGradient(themeName) {
-    // Áp dụng gradient cho các biến CSS
     switch(themeName) {
-        case 'red':
-            document.documentElement.style.setProperty('--primary-color', '#FF416C');
-            document.documentElement.style.setProperty('--secondary-color', '#FF4B2B');
-            break;
-        case 'blue':
-            document.documentElement.style.setProperty('--primary-color', '#3498db');
-            document.documentElement.style.setProperty('--secondary-color', '#2c3e50');
-            break;
         case 'green':
             document.documentElement.style.setProperty('--primary-color', '#00b09b');
             document.documentElement.style.setProperty('--secondary-color', '#96c93d');
@@ -1774,6 +1733,273 @@ function setThemeGradient(themeName) {
             document.documentElement.style.setProperty('--primary-color', '#3498db');
             document.documentElement.style.setProperty('--secondary-color', '#2c3e50');
     }
+}
+
+// ==================== LƯU VÀ TẢI DỮ LIỆU ====================
+function saveAllData() {
+    try {
+        const data = {
+            // Lưu tất cả các trường input
+            configName: document.getElementById('configName').value,
+            configDescription: document.getElementById('configDescription').value,
+            organization: document.getElementById('organization').value,
+            identifier: document.getElementById('identifier').value,
+            removalDisallowed: document.getElementById('removalDisallowed').value,
+            
+            wifiSSID: document.getElementById('wifiSSID').value,
+            wifiSecurity: document.getElementById('wifiSecurity').value,
+            wifiPassword: document.getElementById('wifiPassword').value,
+            wifiAutoJoin: document.getElementById('wifiAutoJoin').value,
+            wifiHidden: document.getElementById('wifiHidden').value,
+            
+            dnsProxy: document.getElementById('dnsProxy').value,
+            dnsServers: document.getElementById('dnsServers').value,
+            dnsSearchDomains: document.getElementById('dnsSearchDomains').value,
+            
+            // Webclip settings
+            multipleWebclipCount: document.getElementById('multipleWebclipCount').value,
+            multipleWebclipBaseName: document.getElementById('multipleWebclipBaseName').value,
+            multipleWebclipBaseURL: document.getElementById('multipleWebclipBaseURL').value,
+            webclipFullScreen: document.getElementById('webclipFullScreen').value,
+            
+            // Advanced settings
+            apnName: document.getElementById('apnName').value,
+            apnUsername: document.getElementById('apnUsername').value,
+            apnPassword: document.getElementById('apnPassword').value,
+            apnProxy: document.getElementById('apnProxy').value,
+            apnProxyPort: document.getElementById('apnProxyPort').value,
+            
+            fakeStorageEnabled: document.getElementById('fakeStorageEnabled').value,
+            fakeTotalCapacity: document.getElementById('fakeTotalCapacity').value,
+            fakeAvailableCapacity: document.getElementById('fakeAvailableCapacity').value,
+            
+            notificationTitle: document.getElementById('notificationTitle').value,
+            notificationBody: document.getElementById('notificationBody').value,
+            notificationAction: document.getElementById('notificationAction').value,
+            notificationSound: document.getElementById('notificationSound').value,
+            
+            customPayloadType: document.getElementById('customPayloadType').value,
+            customPayloadData: document.getElementById('customPayloadData').value,
+            customPayloadDescription: document.getElementById('customPayloadDescription').value,
+            
+            // Lưu danh sách webclips
+            webClips: webClips.map(webclip => ({
+                id: webclip.id,
+                name: webclip.name,
+                url: webclip.url,
+                icon: webclip.icon,
+                fullScreen: webclip.fullScreen
+            })),
+            
+            // Lưu cài đặt
+            soundEnabled: soundEnabled,
+            volumeLevel: volumeLevel,
+            musicEnabled: musicEnabled,
+            
+            // Lưu giao diện
+            theme: localStorage.getItem('theme'),
+            backgroundImage: localStorage.getItem('backgroundImage'),
+            customBackgroundImage: localStorage.getItem('customBackgroundImage')
+        };
+        
+        localStorage.setItem('iosConfigData', JSON.stringify(data));
+        showAutoSaveInfo();
+        return true;
+    } catch (error) {
+        console.error('Lỗi khi lưu dữ liệu:', error);
+        showToast('Lỗi khi lưu dữ liệu', false);
+        return false;
+    }
+}
+
+function loadAllData() {
+    try {
+        const savedData = localStorage.getItem('iosConfigData');
+        if (!savedData) {
+            showToast('Không có dữ liệu đã lưu', false);
+            return false;
+        }
+        
+        const data = JSON.parse(savedData);
+        
+        // Khôi phục các trường input
+        document.getElementById('configName').value = data.configName || '';
+        document.getElementById('configDescription').value = data.configDescription || '';
+        document.getElementById('organization').value = data.organization || '';
+        document.getElementById('identifier').value = data.identifier || '';
+        document.getElementById('removalDisallowed').value = data.removalDisallowed || 'false';
+        
+        document.getElementById('wifiSSID').value = data.wifiSSID || '';
+        document.getElementById('wifiSecurity').value = data.wifiSecurity || 'None';
+        document.getElementById('wifiPassword').value = data.wifiPassword || '';
+        document.getElementById('wifiAutoJoin').value = data.wifiAutoJoin || 'true';
+        document.getElementById('wifiHidden').value = data.wifiHidden || 'false';
+        
+        document.getElementById('dnsProxy').value = data.dnsProxy || 'false';
+        document.getElementById('dnsServers').value = data.dnsServers || '';
+        document.getElementById('dnsSearchDomains').value = data.dnsSearchDomains || '';
+        
+        // Khôi phục webclip settings
+        document.getElementById('multipleWebclipCount').value = data.multipleWebclipCount || '1';
+        document.getElementById('multipleWebclipBaseName').value = data.multipleWebclipBaseName || '';
+        document.getElementById('multipleWebclipBaseURL').value = data.multipleWebclipBaseURL || '';
+        document.getElementById('webclipFullScreen').value = data.webclipFullScreen || 'false';
+        
+        // Khôi phục advanced settings
+        document.getElementById('apnName').value = data.apnName || '';
+        document.getElementById('apnUsername').value = data.apnUsername || '';
+        document.getElementById('apnPassword').value = data.apnPassword || '';
+        document.getElementById('apnProxy').value = data.apnProxy || '';
+        document.getElementById('apnProxyPort').value = data.apnProxyPort || '';
+        
+        document.getElementById('fakeStorageEnabled').value = data.fakeStorageEnabled || 'false';
+        document.getElementById('fakeTotalCapacity').value = data.fakeTotalCapacity || '';
+        document.getElementById('fakeAvailableCapacity').value = data.fakeAvailableCapacity || '';
+        
+        document.getElementById('notificationTitle').value = data.notificationTitle || '';
+        document.getElementById('notificationBody').value = data.notificationBody || '';
+        document.getElementById('notificationAction').value = data.notificationAction || '';
+        document.getElementById('notificationSound').value = data.notificationSound || '';
+        
+        document.getElementById('customPayloadType').value = data.customPayloadType || '';
+        document.getElementById('customPayloadData').value = data.customPayloadData || '';
+        document.getElementById('customPayloadDescription').value = data.customPayloadDescription || '';
+        
+        // Khôi phục danh sách webclips
+        webClips = data.webClips || [];
+        const list = document.getElementById('multipleWebclipsList');
+        if (list) {
+            list.innerHTML = '';
+            if (webClips.length > 0) {
+                webClips.forEach(webclip => {
+                    addWebclipToList(webclip);
+                });
+            } else {
+                list.innerHTML = `
+                    <div class="empty-state" id="webclipEmptyState" style="text-align: center; padding: 40px 20px; color: rgba(255,255,255,0.6);">
+                        <i class="fas fa-inbox" style="font-size: 3em; margin-bottom: 15px; opacity: 0.5;"></i>
+                        <p style="margin: 0 0 8px 0; font-size: 1.1em;">Chưa có web clip nào được tạo</p>
+                        <small style="font-size: 0.9em;">Hãy thêm web clip từ các phần bên trên</small>
+                    </div>
+                `;
+            }
+        }
+        updateWebclipsCount();
+        
+        // Khôi phục cài đặt
+        soundEnabled = data.soundEnabled !== false;
+        volumeLevel = data.volumeLevel || 80;
+        musicEnabled = data.musicEnabled !== false;
+        
+        // Khôi phục giao diện
+        if (data.theme) {
+            localStorage.setItem('theme', data.theme);
+            setThemeGradient(data.theme);
+        }
+        
+        if (data.customBackgroundImage) {
+            localStorage.setItem('customBackgroundImage', data.customBackgroundImage);
+            document.body.style.backgroundImage = `url('${data.customBackgroundImage}')`;
+        } else if (data.backgroundImage) {
+            localStorage.setItem('backgroundImage', data.backgroundImage);
+            document.body.style.backgroundImage = `url('${data.backgroundImage}')`;
+        }
+        
+        // Khởi tạo lại âm nhạc
+        const musicBtn = document.getElementById('musicBtn');
+        if (musicBtn) {
+            if (musicEnabled) {
+                backgroundMusic.play().catch(e => console.log("Nhạc không thể phát:", e));
+                musicBtn.classList.remove('muted');
+                musicBtn.classList.add('playing');
+                musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+            } else {
+                musicBtn.classList.remove('playing');
+                musicBtn.classList.add('muted');
+                musicBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            }
+        }
+        
+        updateVolume();
+        initCustomization();
+        
+        showToast('Đã tải dữ liệu thành công!', true);
+        return true;
+    } catch (error) {
+        console.error('Lỗi khi tải dữ liệu:', error);
+        showToast('Lỗi khi tải dữ liệu', false);
+        return false;
+    }
+}
+
+function exportDataToFile() {
+    try {
+        const data = localStorage.getItem('iosConfigData');
+        if (!data) {
+            showToast('Không có dữ liệu để xuất', false);
+            return;
+        }
+        
+        const blob = new Blob([data], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `ios_config_backup_${new Date().toISOString().split('T')[0]}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        showToast('Đã xuất dữ liệu thành công!', true);
+    } catch (error) {
+        console.error('Lỗi khi xuất dữ liệu:', error);
+        showToast('Lỗi khi xuất dữ liệu', false);
+    }
+}
+
+function importDataFromFile(event) {
+    try {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const data = JSON.parse(e.target.result);
+                localStorage.setItem('iosConfigData', JSON.stringify(data));
+                loadAllData();
+                showToast('Đã nhập dữ liệu thành công!', true);
+            } catch (error) {
+                console.error('Lỗi khi đọc file:', error);
+                showToast('File không hợp lệ', false);
+            }
+        };
+        reader.readAsText(file);
+        
+        // Reset input file
+        event.target.value = '';
+    } catch (error) {
+        console.error('Lỗi khi nhập dữ liệu:', error);
+        showToast('Lỗi khi nhập dữ liệu', false);
+    }
+}
+
+// Auto save khi người dùng thay đổi input
+function setupAutoSave() {
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('change', function() {
+            saveAllData();
+        });
+        input.addEventListener('input', function() {
+            // Debounce để tránh lưu quá nhiều
+            clearTimeout(input._timer);
+            input._timer = setTimeout(() => {
+                saveAllData();
+            }, 1000);
+        });
+    });
 }
 
 // Configuration generation functions
@@ -2107,6 +2333,7 @@ function generateConfig(isPreview) {
         document.getElementById('previewSection').style.display = 'block';
         document.getElementById('successMessage').style.display = 'block';
     }
+    saveAllData(); // Lưu sau khi tạo cấu hình
 }
 
 function handleDirectInstall() {
@@ -2117,7 +2344,6 @@ function handleDirectInstall() {
     const a = document.createElement('a');
     a.href = url;
     
-    // Lấy tên cấu hình từ input và làm sạch để dùng làm tên file
     const configName = document.getElementById('configName').value || 'configuration';
     const cleanFileName = configName.replace(/[^\w\s-]/gi, '').replace(/\s+/g, '_');
     a.download = `${cleanFileName}.mobileconfig`;
@@ -2208,7 +2434,6 @@ function switchToTab(tabId) {
 }
 
 function quickGenerateConfig() {
-    // Tạo cấu hình với giá trị mặc định
     document.getElementById('configName').value = 'Cấu hình iOS - ' + new Date().toLocaleDateString('vi-VN');
     document.getElementById('identifier').value = 'com.htios.' + Date.now();
     document.getElementById('removalDisallowed').value = 'false';
@@ -2233,11 +2458,16 @@ function resetForm() {
         document.getElementById('previewSection').style.display = 'none';
         showToast('Đã đặt lại tất cả các trường về giá trị mặc định!', true);
         toggleMenu();
+        saveAllData(); // Lưu sau khi reset
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     updateWebclipsCount();
+    
+    // Tự động tải dữ liệu khi trang được tải
+    loadAllData();
+    setupAutoSave();
     
     const tabs = document.querySelectorAll('.tab');
     tabs.forEach(tab => {
@@ -2333,6 +2563,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const quickGenerateBtn = document.getElementById('quickGenerateBtn');
     const exportConfigBtn = document.getElementById('exportConfigBtn');
     const importConfigBtn = document.getElementById('importConfigBtn');
+    const saveDataBtn = document.getElementById('saveDataBtn');
+    const loadDataBtn = document.getElementById('loadDataBtn');
     const resetFormBtn = document.getElementById('resetFormBtn');
     
     if (menuBtn) {
@@ -2367,10 +2599,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    if (saveDataBtn) {
+        saveDataBtn.addEventListener('click', function() {
+            playSound(clickSound);
+            if (saveAllData()) {
+                showToast('Đã lưu tất cả dữ liệu thành công!', true);
+            }
+            toggleMenu();
+        });
+    }
+    
+    if (loadDataBtn) {
+        loadDataBtn.addEventListener('click', function() {
+            playSound(clickSound);
+            loadAllData();
+            toggleMenu();
+        });
+    }
+    
     if (resetFormBtn) {
         resetFormBtn.addEventListener('click', function() {
             playSound(clickSound);
             resetForm();
+        });
+    }
+    
+    // Thêm file input ẩn cho import data
+    const importFileInput = document.createElement('input');
+    importFileInput.type = 'file';
+    importFileInput.accept = '.json';
+    importFileInput.style.display = 'none';
+    importFileInput.addEventListener('change', importDataFromFile);
+    document.body.appendChild(importFileInput);
+    
+    if (importConfigBtn) {
+        importConfigBtn.addEventListener('click', function() {
+            playSound(clickSound);
+            importFileInput.click();
+            toggleMenu();
         });
     }
     
@@ -2410,6 +2676,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.removeItem('customBackgroundImage');
             document.getElementById('customBgFileName').textContent = 'Chưa chọn ảnh';
             showToast('Đã thay đổi ảnh nền!', true);
+            saveAllData();
         });
     });
     
@@ -2430,6 +2697,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     document.getElementById('customBgFileName').textContent = file.name;
                     showToast('Đã đặt ảnh nền tùy chỉnh!', true);
+                    saveAllData();
                 };
                 reader.readAsDataURL(file);
             }
@@ -2444,15 +2712,17 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             
             const theme = this.getAttribute('data-theme');
-            
-            // Lưu tên theme thay vì màu cụ thể
             localStorage.setItem('theme', theme);
-            
-            // Áp dụng gradient cho theme
             setThemeGradient(theme);
             
             showToast(`Đã đổi sang chủ đề ${theme}!`, true);
+            saveAllData();
         });
+    });
+
+    // Lưu dữ liệu khi người dùng rời trang
+    window.addEventListener('beforeunload', function() {
+        saveAllData();
     });
 });
     </script>
