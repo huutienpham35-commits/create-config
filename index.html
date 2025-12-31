@@ -12,7 +12,8 @@
             --secondary-color: #5856D6;
             --card-color: rgba(255, 255, 255, 0.1);
             --text-color: white;
-            --border-color: rgba(255, 255, 255, 0.2);
+            --input-text-color: #000000; /* Màu chữ đen cho input */
+            --border-color: rgba(255, 255, 255, 0.3); /* Viền sáng hơn */
             --radius: 15px;
         }
         
@@ -41,17 +42,18 @@
         header {
             text-align: center;
             margin-bottom: 20px;
+            position: relative;
         }
         
         h1 {
-            color: white;
+            color: rgb(160, 102, 214);
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             font-size: 2.2em;
         }
         
         .description {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0);
             margin-bottom: 15px;
             font-size: 1em;
         }
@@ -62,7 +64,7 @@
             padding: 20px;
             margin-bottom: 15px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--border-color); /* Thêm viền cho card */
         }
         
         .form-group {
@@ -80,28 +82,29 @@
         input, select, textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3); /* Viền sáng hơn */
             border-radius: 8px;
             font-size: 16px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+            background: rgba(255, 255, 255, 0.9); /* Nền sáng hơn cho chữ đen rõ */
+            color: var(--input-text-color); /* Màu chữ đen */
             transition: border-color 0.3s;
         }
         
         input::placeholder, textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(0, 0, 0, 0.6); /* Placeholder màu xám đậm */
         }
         
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: var(--primary-color);
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.3); /* Hiệu ứng focus */
         }
         
         button {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient cho nút */
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút */
             padding: 12px 20px;
             border-radius: 8px;
             font-size: 16px;
@@ -113,9 +116,10 @@
         }
         
         button:hover {
-            background-color: var(--secondary-color);
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
             transform: translateY(-2px);
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.8);
         }
         
         .preview-section {
@@ -124,7 +128,7 @@
         
         .preview-content {
             background: rgba(0, 0, 0, 0.8);
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--border-color); /* Thêm viền */
             border-radius: 8px;
             padding: 20px;
             max-height: 400px;
@@ -143,11 +147,13 @@
         }
         
         .secondary-btn {
-            background-color: rgba(108, 117, 125, 0.8);
+            background: linear-gradient(135deg, rgba(108, 117, 125, 0.8), rgba(73, 80, 87, 0.8));
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         .secondary-btn:hover {
-            background-color: rgba(90, 98, 104, 0.9);
+            background: linear-gradient(135deg, rgba(90, 98, 104, 0.9), rgba(62, 68, 74, 0.9));
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
         .tabs-container {
@@ -184,15 +190,16 @@
             color: white;
             font-weight: 500;
             transition: all 0.3s;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.2); /* Viền cho tab */
             background: rgba(255, 255, 255, 0.1);
             min-width: 140px;
             flex-shrink: 0;
         }
         
         .tab.active {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient cho tab active */
             color: white;
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
         .tab-content {
@@ -237,7 +244,7 @@
             color: white;
             font-weight: 500;
             transition: all 0.3s;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.2); /* Viền cho advanced tab */
             background: rgba(255, 255, 255, 0.1);
             min-width: 160px;
             flex-shrink: 0;
@@ -245,8 +252,9 @@
         }
         
         .advanced-tab.active {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient cho advanced tab active */
             color: white;
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
         .advanced-tab-content {
@@ -265,6 +273,7 @@
             margin-top: 15px;
             display: none;
             border-left: 4px solid #28a745;
+            border: 2px solid rgba(40, 167, 69, 0.5); /* Thêm viền */
         }
         
         .form-row {
@@ -282,6 +291,7 @@
             padding: 20px;
             margin-top: 20px;
             border-left: 4px solid #FFA000;
+            border: 2px solid rgba(255, 160, 0, 0.3); /* Thêm viền */
         }
         
         .webclip-list {
@@ -295,7 +305,7 @@
             align-items: center;
             gap: 12px;
             padding: 12px;
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--border-color); /* Viền cho webclip item */
             border-radius: 8px;
             margin-bottom: 10px;
             background: rgba(255, 255, 255, 0.05);
@@ -307,6 +317,7 @@
             border-radius: 8px;
             overflow: hidden;
             flex-shrink: 0;
+            border: 2px solid rgba(255, 255, 255, 0.2); /* Viền cho icon */
         }
         
         .webclip-item-icon img {
@@ -336,9 +347,9 @@
         }
         
         .remove-btn {
-            background-color: #FF3B30;
+            background: linear-gradient(135deg, #FF3B30, #D32F2F); /* Gradient cho nút xóa */
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.3); /* Viền cho nút xóa */
             border-radius: 6px;
             padding: 6px 12px;
             cursor: pointer;
@@ -347,7 +358,8 @@
         }
         
         .remove-btn:hover {
-            background-color: #d32f2f;
+            background: linear-gradient(135deg, #D32F2F, #B71C1C);
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
         .file-input-wrapper {
@@ -369,7 +381,7 @@
         
         .file-input-btn {
             background-color: rgba(255, 255, 255, 0.1);
-            border: 2px dashed var(--border-color);
+            border: 2px dashed var(--border-color); /* Viền dashed */
             border-radius: 8px;
             padding: 20px;
             text-align: center;
@@ -390,14 +402,15 @@
             text-align: center;
         }
 
-        .settings-btn {
+        /* Nút Menu */
+        .menu-btn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            top: 30px;
+            left: 30px;
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             display: flex;
             align-items: center;
@@ -406,13 +419,39 @@
             z-index: 1000;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút menu */
+            font-size: 20px;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.1) rotate(15deg);
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .settings-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút settings */
             font-size: 20px;
         }
 
         .settings-btn:hover {
             transform: scale(1.1) rotate(15deg);
-            background: var(--secondary-color);
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
         }
 
@@ -432,13 +471,14 @@
             z-index: 1000;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho nút music */
             font-size: 22px;
         }
 
         .music-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.8);
         }
 
         .music-btn.playing {
@@ -475,7 +515,7 @@
             z-index: 1000;
             transition: left 0.5s ease;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--border-color); /* Viền cho panel */
         }
 
         .customization-panel.open {
@@ -488,14 +528,14 @@
             top: 20px;
             width: 45px;
             height: 45px;
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 0 10px 10px 0;
             cursor: pointer;
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho toggle */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
@@ -526,10 +566,11 @@
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
-        .theme-red { background: linear-gradient(135deg, #e74c3c, #c0392b); }
-        .theme-blue { background: linear-gradient(135deg, #3498db, #2980b9); }
-        .theme-green { background: linear-gradient(135deg, #2ecc71, #27ae60); }
-        .theme-purple { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+        /* Gradient cho các theme */
+        .theme-purple { background: linear-gradient(135deg, #8A2387, #E94057, #F27121); }
+        .theme-red { background: linear-gradient(135deg, #FF416C, #FF4B2B); }
+        .theme-blue { background: linear-gradient(135deg, #3498db, #2c3e50); }
+        .theme-green { background: linear-gradient(135deg, #00b09b, #96c93d); }
 
         .toast {
             position: fixed;
@@ -544,7 +585,7 @@
             display: none;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--border-color); /* Viền cho toast */
         }
 
         .input-group {
@@ -579,7 +620,7 @@
 
         .bg-option {
             padding: 10px;
-            border: 2px solid var(--border-color);
+            border: 2px solid var(--border-color); /* Viền cho bg option */
             border-radius: 8px;
             cursor: pointer;
             text-align: center;
@@ -627,7 +668,7 @@
             padding: 15px;
             border-radius: 10px;
             background: rgba(255, 255, 255, 0.1);
-            border: 2px solid transparent;
+            border: 2px solid var(--border-color); /* Viền cho install option */
             cursor: pointer;
             transition: all 0.3s;
             min-width: 200px;
@@ -670,6 +711,7 @@
             padding: 20px;
             margin-top: 20px;
             border-left: 4px solid var(--primary-color);
+            border: 2px solid var(--border-color); /* Viền cho installation guide */
         }
 
         .installation-steps {
@@ -683,10 +725,11 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.1); /* Viền cho installation step */
         }
 
         .step-number {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             width: 30px;
             height: 30px;
@@ -697,6 +740,7 @@
             font-weight: bold;
             margin-right: 15px;
             flex-shrink: 0;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho step number */
         }
 
         .step-content {
@@ -710,7 +754,7 @@
 
         .step-description {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0);
         }
 
         @media (max-width: 768px) {
@@ -763,12 +807,19 @@
                 height: 50px;
                 font-size: 18px;
             }
+            
+            .menu-btn {
+                top: 20px;
+                left: 20px;
+                width: 50px;
+                height: 50px;
+            }
         }
 
         .create-file-btn {
-            background-color: #28a745;
+            background: linear-gradient(135deg, #28a745, #218838); /* Gradient cho create file button */
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho create file button */
             padding: 15px 25px;
             border-radius: 8px;
             font-size: 18px;
@@ -783,9 +834,10 @@
         }
 
         .create-file-btn:hover {
-            background-color: #218838;
+            background: linear-gradient(135deg, #218838, #1e7e34);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.8);
         }
 
         .create-file-btn i {
@@ -801,9 +853,9 @@
         }
 
         .install-btn {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho install button */
             padding: 15px 25px;
             border-radius: 8px;
             font-size: 16px;
@@ -817,14 +869,15 @@
         }
 
         .install-btn:hover {
-            background-color: var(--secondary-color);
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
             transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.8);
         }
 
         .create-btn {
-            background-color: #28a745;
+            background: linear-gradient(135deg, #28a745, #218838);
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Viền cho create button */
             padding: 15px 25px;
             border-radius: 8px;
             font-size: 16px;
@@ -838,12 +891,103 @@
         }
 
         .create-btn:hover {
-            background-color: #218838;
+            background: linear-gradient(135deg, #218838, #1e7e34);
             transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Menu Panel */
+        .menu-panel {
+            position: fixed;
+            top: 100px;
+            left: -400px;
+            width: 350px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 25px;
+            border-radius: 0 15px 15px 0;
+            z-index: 1000;
+            transition: left 0.5s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--border-color);
+        }
+
+        .menu-panel.open {
+            left: 0;
+        }
+
+        .menu-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-item:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: translateX(5px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .menu-item i {
+            font-size: 20px;
+            width: 30px;
         }
     </style>
 </head>
 <body>
+    <!-- Nút Menu -->
+    <button class="menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Menu Panel -->
+    <div class="menu-panel" id="menuPanel">
+        <h3 style="color: white; margin-bottom: 20px; text-align: center;">Menu</h3>
+        <div class="menu-item" data-tab="basic">
+            <i class="fas fa-info-circle"></i>
+            <span>Thông Tin Cơ Bản</span>
+        </div>
+        <div class="menu-item" data-tab="webclip">
+            <i class="fas fa-link"></i>
+            <span>Web Clip</span>
+        </div>
+        <div class="menu-item" data-tab="wifi">
+            <i class="fas fa-wifi"></i>
+            <span>Wi-Fi</span>
+        </div>
+        <div class="menu-item" data-tab="dns">
+            <i class="fas fa-server"></i>
+            <span>DNS</span>
+        </div>
+        <div class="menu-item" data-tab="advanced">
+            <i class="fas fa-cogs"></i>
+            <span>Nâng Cao</span>
+        </div>
+        <div class="menu-item" id="quickGenerateBtn">
+            <i class="fas fa-bolt"></i>
+            <span>Tạo Nhanh Cấu Hình</span>
+        </div>
+        <div class="menu-item" id="exportConfigBtn">
+            <i class="fas fa-download"></i>
+            <span>Xuất Cấu Hình</span>
+        </div>
+        <div class="menu-item" id="importConfigBtn">
+            <i class="fas fa-upload"></i>
+            <span>Nhập Cấu Hình</span>
+        </div>
+        <div class="menu-item" id="resetFormBtn">
+            <i class="fas fa-redo"></i>
+            <span>Đặt Lại Form</span>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <h1>Tạo Cấu Hình iOS By 𝙃𝙏 𝙄𝙊𝙎ᯓDev</h1>
@@ -940,7 +1084,7 @@
                     <h2>Cấu Hình DNS</h2>
                     <div class="form-group">
                         <label for="dnsProxy">Proxy DNS</label>
-                        <select id="dnsProxy">
+                            <select id="dnsProxy">
                             <option value="false">Không sử dụng</option>
                             <option value="true">Sử dụng proxy DNS</option>
                         </select>
@@ -960,7 +1104,7 @@
             <div class="tab-content" id="webclip-tab">
                 <div class="card">
                     <h2>Web Clip</h2>
-                    
+
                     <!-- PHẦN TẠO NHIỀU WEBCLIP -->
                     <div class="multiple-webclips-section">
                         <h3><i class="fas fa-layer-group"></i> Tạo Nhiều Web Clip</h3>
@@ -999,7 +1143,7 @@
                     </div>
 
                     <!-- DANH SÁCH WEBCLIP ĐÃ TẠO -->
-                    <div class="webclips-summary-section" style="background-color: rgba(232, 245, 233, 0.1); border-radius: 8px; padding: 20px; margin-top: 20px; border-left: 4px solid #4CAF50;">
+                    <div class="webclips-summary-section" style="background-color: rgba(232, 245, 233, 0.1); border-radius: 8px; padding: 20px; margin-top: 20px; border-left: 4px solid #4CAF50; border: 2px solid rgba(76, 175, 80, 0.3);">
                         <h3><i class="fas fa-list"></i> Danh Sách Web Clip Đã Tạo</h3>
                         <div style="color: rgba(255,255,255,0.8); margin-bottom: 15px; font-size: 14px;">
                             Tổng số: <span id="totalWebclipsCount">0</span> web clip
@@ -1013,7 +1157,7 @@
                             </div>
                         </div>
                         <div style="text-align: center; margin-top: 15px;">
-                            <button type="button" id="clearAllWebclipsBtn" class="remove-btn" style="background-color: #f44336;">
+                            <button type="button" id="clearAllWebclipsBtn" class="remove-btn" style="background: linear-gradient(135deg, #f44336, #d32f2f);">
                                 <i class="fas fa-trash"></i> Xóa Tất Cả
                             </button>
                         </div>
@@ -1161,7 +1305,7 @@
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <div class="step-title">Tải file cấu hình</div>
-                           <div class="step-description">Nhấn nút "Tạo File ZIP" để tải file cấu hình về thiết bị của bạn</div>
+                            <div class="step-description">Nhấn nút "Tạo File ZIP" để tải file cấu hình về thiết bị của bạn</div>
                         </div>
                     </div>
                     <div class="installation-step">
@@ -1203,6 +1347,11 @@
         <i class="fas fa-cog"></i>
     </button>
 
+    <!-- Music Button -->
+    <button class="music-btn" id="musicBtn">
+        <i class="fas fa-music"></i>
+    </button>
+
     <!-- Customization Panel -->
     <div class="customization-panel" id="customizationPanel">
         <button class="toggle-panel" id="togglePanel">
@@ -1233,7 +1382,8 @@
                 <div class="color-option theme-purple" data-theme="purple"></div>
             </div>
         </div>
-        
+    </div>
+    
     <!-- Toast Notification -->
     <div class="toast" id="toast"></div>
 
@@ -1256,6 +1406,21 @@ backgroundMusic.volume = 0.3;
 let soundEnabled = localStorage.getItem('soundEnabled') !== 'false';
 let volumeLevel = localStorage.getItem('volumeLevel') ? parseInt(localStorage.getItem('volumeLevel')) : 80;
 let musicEnabled = localStorage.getItem('musicEnabled') !== 'false';
+
+// Flower effect
+function createFlowerEffect() {
+    const flower = document.createElement('div');
+    flower.className = 'flower';
+    flower.innerHTML = '';
+    flower.style.left = Math.random() * 100 + 'vw';
+    flower.style.fontSize = (Math.random() * 20 + 15) + 'px';
+    flower.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    document.body.appendChild(flower);
+    
+    setTimeout(() => {
+        flower.remove();
+    }, 10000);
+}
 
 // Helper functions
 function generateUUID() {
@@ -1300,7 +1465,7 @@ function addWebclipToList(webclip) {
     
     item.innerHTML = `
         <div class="webclip-item-icon">
-            ${webclip.icon ? `<img src="${webclip.icon}" alt="${webclip.name}">` : `<div style="width:100%;height:100%;background:#007AFF;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold">${webclip.name.charAt(0)}</div>`}
+            ${webclip.icon ? `<img src="${webclip.icon}" alt="${webclip.name}">` : `<div style="width:100%;height:100%;background:linear-gradient(135deg, var(--primary-color), var(--secondary-color));display:flex;align-items:center;justify-content:center;color:white;font-weight:bold">${webclip.name.charAt(0)}</div>`}
         </div>
         <div class="webclip-item-info">
             <div class="webclip-item-name">${webclip.name}</div>
@@ -1447,8 +1612,8 @@ function generateMultipleWebclips() {
     const baseURL = baseURLInput.value || 'https://example.com/app';
     const fullScreen = fullScreenSelect.value === 'true';
     
-    if (count < 1 || count > 5000) {
-        showToast('Số lượng Web Clip phải từ 1 đến 5000', false);
+    if (count < 1 || count > 8000) {
+        showToast('Số lượng Web Clip phải từ 1 đến 8000', false);
         return;
     }
     
@@ -1461,8 +1626,8 @@ function generateMultipleWebclips() {
     for (let i = 1; i <= count; i++) {
         const webclip = {
             id: generateUUID(),
-            name: `${baseName} ${i}`,
-            url: baseURL.endsWith('/') ? `${baseURL}${i}` : `${baseURL}/${i}`,
+            name: baseName, // Không thêm số vào tên
+            url: baseURL,   // Không thêm số vào URL
             icon: currentIconBase64,
             fullScreen: fullScreen
         };
@@ -1530,16 +1695,8 @@ function updateVolume() {
 
 // Customization functions
 function initCustomization() {
-    const volumeSlider = document.getElementById('volumeSlider');
-    const volumeValue = document.getElementById('volumeValue');
     const colorOptions = document.querySelectorAll('.color-option');
     const musicBtn = document.getElementById('musicBtn');
-    
-    if (volumeSlider && volumeValue) {
-        volumeSlider.value = volumeLevel;
-        volumeValue.textContent = volumeLevel;
-        updateVolume();
-    }
     
     if (musicBtn) {
         if (musicEnabled) {
@@ -1556,14 +1713,14 @@ function initCustomization() {
     
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme && colorOptions.length > 0) {
-        document.documentElement.style.setProperty('--primary-color', savedTheme.split(',')[0]);
-        document.documentElement.style.setProperty('--secondary-color', savedTheme.split(',')[1]);
+        // Xác định gradient dựa trên theme name
+        const themeName = getThemeName(savedTheme);
+        setThemeGradient(themeName);
         
         colorOptions.forEach(option => {
             option.classList.remove('active');
         });
         
-        const themeName = getThemeName(savedTheme);
         const activeTheme = document.querySelector(`.theme-${themeName}`);
         if (activeTheme) {
             activeTheme.classList.add('active');
@@ -1586,12 +1743,37 @@ function initCustomization() {
 }
 
 function getThemeName(themeColors) {
-    const [primary, secondary] = themeColors.split(',');
-    if (primary === '#e74c3c' && secondary === '#c0392b') return 'red';
-    if (primary === '#3498db' && secondary === '#2980b9') return 'blue';
-    if (primary === '#2ecc71' && secondary === '#27ae60') return 'green';
-    if (primary === '#9b59b6' && secondary === '#8e44ad') return 'purple';
+    // Trả về tên theme dựa trên màu gradient
+    if (themeColors.includes('FF416C')) return 'red';
+    if (themeColors.includes('3498db')) return 'blue';
+    if (themeColors.includes('00b09b')) return 'green';
+    if (themeColors.includes('8A2387')) return 'purple';
     return 'blue';
+}
+
+function setThemeGradient(themeName) {
+    // Áp dụng gradient cho các biến CSS
+    switch(themeName) {
+        case 'red':
+            document.documentElement.style.setProperty('--primary-color', '#FF416C');
+            document.documentElement.style.setProperty('--secondary-color', '#FF4B2B');
+            break;
+        case 'blue':
+            document.documentElement.style.setProperty('--primary-color', '#3498db');
+            document.documentElement.style.setProperty('--secondary-color', '#2c3e50');
+            break;
+        case 'green':
+            document.documentElement.style.setProperty('--primary-color', '#00b09b');
+            document.documentElement.style.setProperty('--secondary-color', '#96c93d');
+            break;
+        case 'purple':
+            document.documentElement.style.setProperty('--primary-color', '#8A2387');
+            document.documentElement.style.setProperty('--secondary-color', '#F27121');
+            break;
+        default:
+            document.documentElement.style.setProperty('--primary-color', '#3498db');
+            document.documentElement.style.setProperty('--secondary-color', '#2c3e50');
+    }
 }
 
 // Configuration generation functions
@@ -1934,7 +2116,11 @@ function handleDirectInstall() {
     
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'configuration.mobileconfig';
+    
+    // Lấy tên cấu hình từ input và làm sạch để dùng làm tên file
+    const configName = document.getElementById('configName').value || 'configuration';
+    const cleanFileName = configName.replace(/[^\w\s-]/gi, '').replace(/\s+/g, '_');
+    a.download = `${cleanFileName}.mobileconfig`;
     
     if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
         window.open(url, '_blank');
@@ -1943,7 +2129,7 @@ function handleDirectInstall() {
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        showToast('Đã tải file cấu hình. Mở file để cài đặt trên thiết bị iOS.', true);
+        showToast(`Đã tải file cấu hình "${cleanFileName}.mobileconfig"`, true);
     }
     
     URL.revokeObjectURL(url);
@@ -1957,11 +2143,12 @@ async function createFile() {
     }
     
     const configName = document.getElementById('configName').value || 'configuration';
+    const cleanFileName = configName.replace(/[^\w\s-]/gi, '').replace(/\s+/g, '_');
     const mobileconfigContent = previewContent;
     
     const zip = new JSZip();
     
-    zip.file(`${configName}.mobileconfig`, mobileconfigContent);
+    zip.file(`${cleanFileName}.mobileconfig`, mobileconfigContent);
     
     const readmeContent = `CẤU HÌNH iOS - HƯỚNG DẪN CÀI ĐẶT
 
@@ -1969,7 +2156,7 @@ Tệp này chứa cấu hình cho thiết bị iOS của bạn.
 
 HƯỚNG DẪN CÀI ĐẶT:
 1. Giải nén tệp ZIP này
-2. Mở tệp ${configName}.mobileconfig trên thiết bị iOS
+2. Mở tệp ${cleanFileName}.mobileconfig trên thiết bị iOS
 3. Làm theo hướng dẫn trên màn hình để cài đặt cấu hình
 4. Vào Settings → General → VPN & Device Management để xác nhận cấu hình đã được cài đặt
 
@@ -1987,13 +2174,66 @@ Tạo bởi: 𝙃𝙏 𝙄𝙊𝙎ᯓDev`;
     
     const a = document.createElement('a');
     a.href = zipUrl;
-    a.download = `${configName}_iOS_Configuration.zip`;
+    a.download = `${cleanFileName}_iOS_Configuration.zip`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(zipUrl);
     
-    showToast('Đã tạo file ZIP chứa cấu hình thành công!', true);
+    showToast(`Đã tạo file ZIP "${cleanFileName}_iOS_Configuration.zip" thành công!`, true);
+}
+
+// Menu functions
+function toggleMenu() {
+    const menuPanel = document.getElementById('menuPanel');
+    if (menuPanel) {
+        menuPanel.classList.toggle('open');
+    }
+}
+
+function switchToTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('data-tab') === tabId) {
+            tab.classList.add('active');
+        }
+    });
+    
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    document.getElementById(`${tabId}-tab`).classList.add('active');
+    
+    toggleMenu();
+    showToast(`Đã chuyển đến tab ${tabId === 'basic' ? 'Thông Tin Cơ Bản' : tabId === 'webclip' ? 'Web Clip' : tabId === 'wifi' ? 'Wi-Fi' : tabId === 'dns' ? 'DNS' : 'Nâng Cao'}`, true);
+}
+
+function quickGenerateConfig() {
+    // Tạo cấu hình với giá trị mặc định
+    document.getElementById('configName').value = 'Cấu hình iOS - ' + new Date().toLocaleDateString('vi-VN');
+    document.getElementById('identifier').value = 'com.htios.' + Date.now();
+    document.getElementById('removalDisallowed').value = 'false';
+    
+    generateConfig(false);
+    showToast('Đã tạo cấu hình nhanh với giá trị mặc định!', true);
+    toggleMenu();
+}
+
+function resetForm() {
+    if (confirm('Bạn có chắc muốn đặt lại tất cả các trường về giá trị mặc định?')) {
+        document.getElementById('configForm').reset();
+        webClips = [];
+        document.getElementById('multipleWebclipsList').innerHTML = `
+            <div class="empty-state" id="webclipEmptyState" style="text-align: center; padding: 40px 20px; color: rgba(255,255,255,0.6);">
+                <i class="fas fa-inbox" style="font-size: 3em; margin-bottom: 15px; opacity: 0.5;"></i>
+                <p style="margin: 0 0 8px 0; font-size: 1.1em;">Chưa có web clip nào được tạo</p>
+                <small style="font-size: 0.9em;">Hãy thêm web clip từ các phần bên trên</small>
+            </div>
+        `;
+        updateWebclipsCount();
+        document.getElementById('previewSection').style.display = 'none';
+        showToast('Đã đặt lại tất cả các trường về giá trị mặc định!', true);
+        toggleMenu();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -2034,13 +2274,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (webclipIconFile) {
         webclipIconFile.addEventListener('change', function(e) {
             handleIconFileSelect(e, 'webclipIconFileName');
-        });
-    }
-    
-    const previewBtn = document.getElementById('previewBtn');
-    if (previewBtn) {
-        previewBtn.addEventListener('click', function() {
-            generateConfig(true);
         });
     }
     
@@ -2093,13 +2326,59 @@ document.addEventListener('DOMContentLoaded', function() {
         musicBtn.addEventListener('click', toggleMusic);
     }
     
+    // Menu functionality
+    const menuBtn = document.getElementById('menuBtn');
+    const menuPanel = document.getElementById('menuPanel');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const quickGenerateBtn = document.getElementById('quickGenerateBtn');
+    const exportConfigBtn = document.getElementById('exportConfigBtn');
+    const importConfigBtn = document.getElementById('importConfigBtn');
+    const resetFormBtn = document.getElementById('resetFormBtn');
+    
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function() {
+            playSound(clickSound);
+            toggleMenu();
+        });
+    }
+    
+    menuItems.forEach(item => {
+        const tabId = item.getAttribute('data-tab');
+        if (tabId) {
+            item.addEventListener('click', function() {
+                playSound(clickSound);
+                switchToTab(tabId);
+            });
+        }
+    });
+    
+    if (quickGenerateBtn) {
+        quickGenerateBtn.addEventListener('click', function() {
+            playSound(clickSound);
+            quickGenerateConfig();
+        });
+    }
+    
+    if (exportConfigBtn) {
+        exportConfigBtn.addEventListener('click', function() {
+            playSound(clickSound);
+            createFile();
+            toggleMenu();
+        });
+    }
+    
+    if (resetFormBtn) {
+        resetFormBtn.addEventListener('click', function() {
+            playSound(clickSound);
+            resetForm();
+        });
+    }
+    
     const settingsBtn = document.getElementById('settingsBtn');
     const customizationPanel = document.getElementById('customizationPanel');
     const togglePanel = document.getElementById('togglePanel');
     const bgOptions = document.querySelectorAll('.bg-option');
     const colorOptions = document.querySelectorAll('.color-option');
-    const volumeSlider = document.getElementById('volumeSlider');
-    const volumeValue = document.getElementById('volumeValue');
     const customBgUpload = document.getElementById('customBgUpload');
 
     initCustomization();
@@ -2165,45 +2444,16 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             
             const theme = this.getAttribute('data-theme');
-            let primaryColor, secondaryColor;
             
-            switch(theme) {
-                case 'red':
-                    primaryColor = '#e74c3c';
-                    secondaryColor = '#c0392b';
-                    break;
-                case 'blue':
-                    primaryColor = '#3498db';
-                    secondaryColor = '#2980b9';
-                    break;
-                case 'green':
-                    primaryColor = '#2ecc71';
-                    secondaryColor = '#27ae60';
-                    break;
-                case 'purple':
-                    primaryColor = '#9b59b6';
-                    secondaryColor = '#8e44ad';
-                    break;
-            }
+            // Lưu tên theme thay vì màu cụ thể
+            localStorage.setItem('theme', theme);
             
-            document.documentElement.style.setProperty('--primary-color', primaryColor);
-            document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+            // Áp dụng gradient cho theme
+            setThemeGradient(theme);
             
-            localStorage.setItem('theme', `${primaryColor},${secondaryColor}`);
             showToast(`Đã đổi sang chủ đề ${theme}!`, true);
         });
     });
-    
-    if (volumeSlider) {
-        volumeSlider.addEventListener('input', function() {
-            volumeLevel = this.value;
-            if (volumeValue) {
-                volumeValue.textContent = volumeLevel;
-            }
-            localStorage.setItem('volumeLevel', volumeLevel);
-            updateVolume();
-        });
-    }
 });
     </script>
 </body>
